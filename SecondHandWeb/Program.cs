@@ -1,8 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using SecondHand.Infrastructure.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+//Ligação à Base de Dados
+builder.Services.AddDbContext<ApplicationsDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+   
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
