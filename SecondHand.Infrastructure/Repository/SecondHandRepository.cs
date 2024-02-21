@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SecondHand.Infrastructure.Repository
 {
-    public class SecondHandRepository : ISecondHandRepository
+    public class SecondHandRepository : SecondHandRepository
 
     {
     }
